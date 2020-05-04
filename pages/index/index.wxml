@@ -1,0 +1,18 @@
+<!-- 整体 -->
+<view class="viewport">
+<!-- 照片区域 -->
+<view class="preview">
+<image mode="aspectFit" src="{{ImagePath}}"></image>
+</view>
+<view class="result">
+<block wx:if="{{face}}">
+<view>性别：{{face.gender>=50?"男":"女"}}</view>
+<view>年龄：{{face.age}}</view>
+<view>颜值：{{face.beauty}}</view>
+</block>
+</view>
+<!-- 操作区 -->
+<view class="btn">
+<button type="primary" bind:tap="chooseImg">上传照片</button>
+</view>
+</view>
